@@ -4,5 +4,7 @@ etc/
 include/
 lib/
 share/
+data/
+model/
 pyvenv.cfg
 .DS_Store
