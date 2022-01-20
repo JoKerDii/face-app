@@ -6,3 +6,7 @@ jupyter
 sklearn
 opencv-python
 PIL
+polllow
+pickle
+glob
+flask
