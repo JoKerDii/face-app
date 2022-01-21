@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+.navbar-brand {
+    font-family: "Quicksand" !important;
+}
+.nav-link{
+    font-family: "Quicksand" !important;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width:  100%;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-family: "Quicksand";
+}
+
+.navbar-custom{
+    box-shadow: 0 2px 2px -2px rgb(0 0 0 / 15%) !important;
+}
+
+.footer-custom{
+    padding-top: 20px;
+    box-shadow: 0px -2px 2px -2px rgb(0 0 0 / 15%);
+}
+
+.home-title{
+ font-family: "Quicksand";
+ padding-left: 80px;
+ padding-right: 80px;
+}
+
+.skill{
+    padding: 10px 40px 10px 40px;
+    background-color: rgb(245, 245, 245);
+    color: #777;
+    border-radius: 100px;
+    width: 315px;
+    font-size: 19px;
+}
+
+.home-content {
+    font-size: 25px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.button {
+    /* position: fixed; */
+    text-align: center;
+    font-family: "Quicksand";
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    padding: 10px 40px;
+    background-color: rgb(245, 245, 245);
+    color: #777;
+    border-radius: 100px;
+    /* width: 280px; */
+    font-size: 38px;
+    transition: all 0.4s;
+    letter-spacing: 0.1rem;
+}
+
+a:hover {
+    color: rgb(68, 190, 174) !important;
+    text-decoration:none;
+    transition: all 0.4s;
+  }

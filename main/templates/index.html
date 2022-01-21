@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+
+{% block bodyblock %} 
+    <div class= "container home-title">
+        <br>
+        <h1>Gender Identification Application</h1>
+        <br>
+        <br>
+        <p class="content home-content">
+        This is a Flask application integrated with a Machine Learning model for gender identification. This APP can only identify female and male due to the limitation of data.
+        </p>
+    </div>
+    <br>
+    <div align = "center">
+        <a href="{{ url_for('app')}}" class = "button">
+            start
+        </a>
+    </div>
+{% endblock %}
