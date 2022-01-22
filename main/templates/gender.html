@@ -1,0 +1,32 @@
+{% extends 'home.html' %}
+
+{% block bodyblock %} 
+    <div class="container home-title">
+        <br>
+        <h1>Gender Identification Application</h1>
+        <br>
+        <div class = 'container home-content'>
+            <form action="#" method="POST", enctype="multipart/form-data">
+                <label for="upload">Upload Your Image</label>
+                <input type="file" id="upload" name="image" required='true'>
+                <input type="submit" value="Predict">
+            </form>
+        </div>
+    </div>
+
+    {% if uploaded %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='uploads/')}}{{ img_name }}" alt="image_in" width="{{ width }}" height="600">
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='predicts/')}}{{ img_name }}" alt="image_out" width="{{ width }}" height="600">
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+
+
+{% endblock %}
