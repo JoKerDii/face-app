@@ -24,7 +24,9 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 # pipeline function
 def pipeline_model(path,filename, color='bgr'):
     # read in image
-    img = np.array(Image.open(path))
+    # img = np.array(Image.open(path)) # blue color
+    # read in image
+    img = cv2.imread(path) # original color
     
     if color == 'bgr': # convert to gray scale
         gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -52,14 +54,13 @@ def pipeline_model(path,filename, color='bgr'):
         text = "%s : %0.2f"%(gender_pre[predict],score)
         cv2.putText(img,text,(x,y),font,1,(255,255,0),2)
         
-    cv2.imwrite(f'main/static/predicts/{filename}', img)
+    cv2.imwrite(f'static/predicts/{filename}', img)
     
 if __name__ == "__main__":
     # test
-    assert os.path.exists('data/')
-    test_data_path = 'data/root_female.jpg'
+    assert os.path.exists('images/')
+    test_data_path = 'images/root_female.jpg'
     color = 'bgr'
     img = Image.open(test_data_path) # rgb
     img = np.array(img)
     pipeline_model(img, filename = "predicted_root.jpg", color = 'bgr')
-    # plt.imshow(img)

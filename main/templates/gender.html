@@ -7,24 +7,33 @@
         <br>
         <div class = 'container home-content'>
             <form action="#" method="POST", enctype="multipart/form-data">
-                <label for="upload">Upload Your Image</label>
-                <input type="file" id="upload" name="image" required='true'>
-                <input type="submit" value="Predict">
+                <label for="upload" class = 'upload-btn'>Upload Your Image</label>
+                <input type="file" id="upload" name="image" required='true' class = 'upload-input'>
+                <input type="submit" value="Predict" class = 'upload-submit'>
             </form>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
 
     {% if uploaded %}
-        <div class="container">
+        <div class="container model">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="{{ url_for('static', filename='uploads/')}}{{ img_name }}" alt="image_in" width="{{ width }}" height="600">
+                    <img src="{{ url_for('static', filename='uploads/')}}{{ img_name }}" alt="image_in" height="{{ height }}" width="630">
                 </div>
                 <div class="col-md-6">
-                    <img src="{{ url_for('static', filename='predicts/')}}{{ img_name }}" alt="image_out" width="{{ width }}" height="600">
+                    <img src="{{ url_for('static', filename='predicts/')}}{{ img_name }}" alt="image_out" height="{{ height }}" width="630">
                 </div>
             </div>
         </div>
+
+    {% else %}
+        <div class = "container-question">
+            <img src="{{ url_for('static', filename='images/question.png')}}" alt="question" class = "question">
+        </div>
+
     {% endif %}
 
 

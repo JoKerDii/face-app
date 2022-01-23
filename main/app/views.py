@@ -6,7 +6,8 @@ from utils.classifier import *
 import os
 import cv2
 
-uploadFolder = "main/static/uploads"
+uploadFolder = "static/uploads"
+WIDTH = 630
 
 def home():
     return render_template("home.html")
@@ -17,12 +18,12 @@ def index():
 def app():
     return render_template("app.html")
 
-def getWidth(path):
+def getHeight(path):
     img = Image.open(path)
     size = img.size # width and height
-    ratio = size[0] / size[1]
-    width = 600 * ratio
-    return int(width)
+    ratio = size[1] / size[0]
+    height = WIDTH * ratio
+    return int(height)
     
 
 def gender():
@@ -31,10 +32,10 @@ def gender():
         filename = f.filename
         path = os.path.join(uploadFolder, filename)
         f.save(path)
-        width = getWidth(path)
+        height = getHeight(path)
         
         # prediction
         pipeline_model(path, filename = filename, color = 'bgr')
-        return render_template("gender.html", uploaded = True, img_name = filename, width = width)
+        return render_template("gender.html", uploaded = True, img_name = filename, height = height)
     
-    return render_template("gender.html", uploaded = False, img_name = 'facemask.jpg', width = 600)
+    return render_template("gender.html", uploaded = False, img_name = 'facemask.jpg', height = WIDTH)

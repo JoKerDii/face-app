@@ -8,7 +8,7 @@
 }
 
 .footer{
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width:  100%;
@@ -47,6 +47,18 @@
     padding-right: 80px;
 }
 
+.container-demo{
+    text-align: center;
+}
+.container-question {
+    padding-top: 40px;
+    text-align: center;
+    height: 500px;
+}
+.question {
+    height: 380px;
+}
+
 .button {
     /* position: fixed; */
     text-align: center;
@@ -61,6 +73,60 @@
     font-size: 38px;
     transition: all 0.4s;
     letter-spacing: 0.1rem;
+}
+
+.model {
+    padding-bottom: 100px;
+}
+
+.upload-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+.upload-btn {
+    text-align: center;
+    font-family: "Quicksand";
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    padding: 10px 40px;
+    background-color: rgb(245, 245, 245);
+    color: #777;
+    border-radius: 100px;
+    /* width: 280px; */
+    font-size: 22px;
+    transition: all 0.4s;
+    letter-spacing: 0.1rem;
+}
+.upload-input {
+    color: #777;
+}
+
+.upload-submit {
+    border: 0px;
+    text-align: center;
+    font-family: "Quicksand";
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    padding: 10px 40px;
+    background-color: rgb(245, 245, 245);
+    color: #777;
+    border-radius: 100px;
+    /* width: 280px; */
+    font-size: 22px;
+    transition: all 0.4s;
+    letter-spacing: 0.1rem;
+}
+
+.upload-btn:hover {
+    color: rgb(68, 190, 174) !important;
+    text-decoration:none;
+    transition: all 0.4s;
+  }
+
+.upload-submit:hover {
+color: rgb(68, 190, 174) !important;
+text-decoration:none;
+transition: all 0.4s;
 }
 
 a:hover {

@@ -11,9 +11,13 @@
         </p>
     </div>
     <br>
-    <div align = "center">
+    <div align = "center" class = "container-btn">
         <a href="{{ url_for('gender')}}" class = "button">
             start
         </a>
+    </div>
+    <br>
+    <div class = 'container-demo'>
+        <img src="{{url_for('static', filename='images/demo.png')}}" alt="" class = 'demo'>
     </div>
 {% endblock %}
