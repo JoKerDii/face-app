@@ -1,10 +1,10 @@
 from flask import render_template, request
-from flask import redirect, url_for
+# from flask import redirect, url_for
 from PIL import Image
-import pickle
+# import pickle
 from utils.classifier import *
 import os
-import cv2
+# import cv2
 
 uploadFolder = "static/uploads/"
 WIDTH = 630

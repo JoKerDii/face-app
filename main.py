@@ -10,4 +10,4 @@ app.add_url_rule('/app/gender', 'gender', views.gender, methods = ['GET', 'POST'
 
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run()
