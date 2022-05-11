@@ -6,7 +6,7 @@ from utils.classifier import *
 import os
 import cv2
 
-uploadFolder = "static/uploads"
+uploadFolder = "static/uploads/"
 WIDTH = 630
 
 def home():
@@ -31,7 +31,9 @@ def gender():
         f = request.files['image']
         filename = f.filename
         path = os.path.join(uploadFolder, filename)
+        print(path)
         f.save(path)
+        print('File saved sucessfully in \n', path)
         height = getHeight(path)
         
         # prediction
